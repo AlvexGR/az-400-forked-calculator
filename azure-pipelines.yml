@@ -6,14 +6,13 @@ pool: az400m05l05a-pool
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '16.x'
   displayName: 'Install Node.js'
 
 - script: |
-    echo "Run install"
     npm install
-    echo "Run build"
+  displayName: 'npm install'
+
+- script: |
     npm run build
-    echo "Run Test"
-    npm test
-  displayName: 'npm install, build, and test'
+  displayName: 'npm build'
