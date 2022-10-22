@@ -6,9 +6,9 @@ pool: az400m05l05a-pool
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '12.x'
 
-- script: npm -v
+- script: node -v
   displayName: "check node version"
 
 - script: npm install
