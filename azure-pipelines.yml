@@ -4,6 +4,10 @@ trigger:
 pool: az400m05l05a-pool
 
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+
 - script: npm -v
   displayName: "check node version"
 
